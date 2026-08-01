@@ -1,0 +1,159 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #106ebe;
+  color: #59efc7;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease;
+  padding: 20px 5px;
+  overflow: hidden;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 5px;
+}
+.sidebar-header h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+.sidebar {
+  position: fixed;
+  width: 230px;
+  height: 100vh;
+  overflow: visible;
+}
+
+.sidebar-header {
+  position: relative;
+}
+.sidebar-main {
+  flex: 1;
+}
+.sidebar-header button {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #175fcd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collapsed {
+  width: 80px;
+}
+.sidebar-header h5 {
+  font-weight: bold;
+  height: fit-content;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu-item:hover {
+  background: #f1f2f4;
+  color: #5d5f63;
+  transform: translateX(2px);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-left svg {
+  transition: all 0.3s ease;
+}
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.submenu li {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.submenu-icon {
+  padding: 0px 4px;
+}
+.sidebar-footer {
+  border-top: 2px solid rgb(194, 188, 188);
+}
+.sidebar-footer button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgb(210, 195, 195);
+  color: #175fcd;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+.collapsed .menu-item svg {
+  font-size: 20px;
+}
+
+.collapsed .submenu-icon {
+  font-size: 18px;
+}
+
+.submenu li:hover {
+  background: #f1f2f4;
+  color: #5d5f63;
+  transform: translateX(2px);
+  transition: all 0.5s ease;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.menu-item:hover .menu-left svg {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.sidebar-header button:hover {
+  transform: translateY(-20%) scale(0.9);
+}
+.sidebar-footer button {
+  transition: all 0.3s ease;
+}
+.sidebar-footer button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  background: #c4c6c9;
+  color: #6a6c70;
+}
