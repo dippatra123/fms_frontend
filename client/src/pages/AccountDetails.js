@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./accountDetails.css";
+
 const AccountDetails = () => {
   const [accountNo, setAccountNo] = useState("");
   const [businessDate, setBusinessDate] = useState("");
@@ -25,12 +26,6 @@ const AccountDetails = () => {
       return;
     }
 
-    console.log({
-      accountNo,
-      businessDate,
-    });
-
-    // Replace this sample data with your API response
     setAccountDetails({
       accountNo,
       businessDate,
@@ -53,10 +48,12 @@ const AccountDetails = () => {
         <div className="card-header">
           <h5 className="fw-bold mb-0">Account Details</h5>
         </div>
+
         <div className="card-body">
           <div className="search-card">
             <div className="search-item">
               <label className="form-label fw-semibold">Account No.</label>
+
               <select
                 className="form-select"
                 value={accountNo}
@@ -71,6 +68,7 @@ const AccountDetails = () => {
 
             <div className="search-item">
               <label className="form-label fw-semibold">Business Date</label>
+
               <input
                 type="date"
                 className="form-control"
@@ -90,6 +88,7 @@ const AccountDetails = () => {
             </div>
           </div>
         </div>
+
         <div className="container mt-4">
           {/* Details */}
           <div className="card shadow-sm mb-3 custom-card">
@@ -100,46 +99,54 @@ const AccountDetails = () => {
                 <tbody style={{ fontSize: "14px" }}>
                   <tr>
                     <td>Account No</td>
-                    <td>123456789</td>
+                    <td>{accountDetails.accountNo}</td>
+
                     <td>Business Date</td>
-                    <td>26-Jul-2026</td>
+                    <td>{accountDetails.businessDate}</td>
                   </tr>
 
                   <tr>
                     <td>Account Type</td>
-                    <td>Savings</td>
+                    <td>{accountDetails.accountType}</td>
+
                     <td>Owner</td>
-                    <td>John Doe</td>
+                    <td>{accountDetails.owner}</td>
                   </tr>
 
                   <tr>
                     <td>Status</td>
                     <td>
-                      <span className="badge bg-success">Active</span>
+                      <span className="badge bg-success">
+                        {accountDetails.status}
+                      </span>
                     </td>
+
                     <td>Purpose</td>
-                    <td>Personal</td>
+                    <td>{accountDetails.purpose}</td>
                   </tr>
 
                   <tr>
                     <td>Financial Year</td>
-                    <td>2026-27</td>
+                    <td>{accountDetails.financialYear}</td>
+
                     <td>Current Balance</td>
-                    <td>₹50,000</td>
+                    <td>₹{accountDetails.currentBalance}</td>
                   </tr>
 
                   <tr>
                     <td>Total Income</td>
-                    <td>₹2,00,000</td>
+                    <td>₹{accountDetails.totalIncome}</td>
+
                     <td>Total Expense</td>
-                    <td>₹1,20,000</td>
+                    <td>₹{accountDetails.totalExpense}</td>
                   </tr>
 
                   <tr>
                     <td>Financial Year Income</td>
-                    <td>₹5,00,000</td>
+                    <td>₹{accountDetails.financialYearIncome}</td>
+
                     <td>Financial Year Expense</td>
-                    <td>₹3,20,000</td>
+                    <td>₹{accountDetails.financialYearExpense}</td>
                   </tr>
                 </tbody>
               </table>
@@ -193,9 +200,12 @@ const AccountDetails = () => {
                 <tbody style={{ fontSize: "14px" }}>
                   <tr>
                     <td>
-                      <a href="#" className="text-decoration-none fw-semibold">
+                      <button
+                        type="button"
+                        className="btn btn-link text-decoration-none fw-semibold p-0"
+                      >
                         WI-0001
-                      </a>
+                      </button>
                     </td>
 
                     <td>Sample Task</td>
@@ -217,6 +227,7 @@ const AccountDetails = () => {
             </div>
           </div>
         </div>
+
         <div className="d-flex justify-content-between align-items-center p-3 border-top">
           <small className="text-muted">
             Hyperlink WI ID to open Work Item Details
@@ -233,22 +244,6 @@ const AccountDetails = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-// Reusable read-only field
-const ReadOnlyField = ({ label, value }) => {
-  return (
-    <div className="col-lg-6 col-md-6">
-      <label className="form-label">{label}</label>
-
-      <input
-        type="text"
-        className="form-control readonly-field"
-        value={value || ""}
-        readOnly
-      />
     </div>
   );
 };

@@ -174,14 +174,20 @@ const Tranaction = () => {
             <tbody>
               <tr>
                 <td>
-                  <a href="#" className="text-decoration-underline fst-italic">
+                  <button
+                    type="button"
+                    className="btn btn-link p-0 text-decoration-underline fst-italic"
+                  >
                     Hyperlink to open popup
-                  </a>
+                  </button>
                 </td>
                 <td>
-                  <a href="#" className="text-decoration-underline fst-italic">
+                  <button
+                    type="button"
+                    className="btn btn-link p-0 text-decoration-underline fst-italic"
+                  >
                     Hyperlink to open popup
-                  </a>
+                  </button>
                 </td>
                 <td></td>
                 <td></td>
@@ -215,9 +221,12 @@ const Tranaction = () => {
             <tbody>
               <tr>
                 <td>
-                  <a href="#" className="text-decoration-underline fst-italic">
+                  <button
+                    type="button"
+                    className="btn btn-link p-0 text-decoration-underline fst-italic"
+                  >
                     Hyperlink to open popup
-                  </a>
+                  </button>
                 </td>
                 <td></td>
                 <td></td>

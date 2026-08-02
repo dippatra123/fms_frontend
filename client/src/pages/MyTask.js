@@ -1,7 +1,7 @@
 import React from "react";
 
 const MyTask = () => {
-  return <div>MyTask</div>;
+  return;
 };
 
 export default MyTask;
