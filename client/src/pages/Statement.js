@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const Statement = () => {
   const [fromdata, setFromData] = useState({
     accountNo: "",
@@ -40,7 +41,7 @@ const Statement = () => {
           <h5>Statement</h5>
         </div>
 
-        <div className="card-body p-4">
+        <div className="card-body p-4 m-2 form-container">
           <div className="search-card">
             <div className="search-item">
               <label className="form-label fw-semibold">Account No.</label>
@@ -77,9 +78,10 @@ const Statement = () => {
             <div className="search-btn">
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn btn-primary search-btn"
                 onClick={handleSearch}
               >
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
                 Search
               </button>
             </div>
@@ -88,9 +90,9 @@ const Statement = () => {
 
         {/* Old Uploads */}
         <div className="table-responsive mt-2 p-3 card-body">
-          <h5 className="fw-bold mb-2">Old Uploads</h5>
+          <h6 className="fw-semibold mb-2">Old Uploads</h6>
 
-          <table className="table table-sm table-bordered table-hover">
+          <table className="table table-sm table-bordered table-hover custom-table ">
             <thead className="table-info">
               <tr>
                 <th>Account No</th>
@@ -121,18 +123,34 @@ const Statement = () => {
           </table>
 
           <div className="d-flex justify-content-end mt-1">
-            <nav>
-              <ul className="pagination">
-                <li className="page-item">
-                  <button type="button" className="page-link border-0 bg-white">
-                    Previous
-                  </button>
+            <nav className="d-flex justify-content-center mt-2">
+              <ul className="pagination custom-pagination">
+                <li className="page-item disabled">
+                  <button className="page-link">← Previous</button>
+                </li>
+
+                <li className="page-item active">
+                  <button className="page-link">1</button>
                 </li>
 
                 <li className="page-item">
-                  <button type="button" className="page-link border-0 bg-white">
-                    Next
-                  </button>
+                  <button className="page-link">2</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">3</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">4</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">5</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">Next →</button>
                 </li>
               </ul>
             </nav>
@@ -141,9 +159,9 @@ const Statement = () => {
 
         {/* Statement Upload */}
         <div className="table-responsive mt-2 p-3 card-body">
-          <h5 className="fw-bold mb-2">Statement Upload</h5>
+          <h6 className="fw-semibold mb-2">Statement Upload</h6>
 
-          <table className="table table-sm table-bordered table-hover">
+          <table className="table table-sm table-bordered table-hover custom-table ">
             <thead className="table-info">
               <tr>
                 <th>Account No</th>

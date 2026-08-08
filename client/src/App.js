@@ -16,6 +16,7 @@ import MyContribution from "./pages/MyContribution";
 import MyPayment from "./pages/MyPayment";
 import MemberSummary from "./pages/MemberSummary";
 import AccountSummary from "./pages/AccountSummary";
+import VendorSummary from "./pages/VendorSummary";
 function App() {
   return (
     <BrowserRouter>
@@ -38,6 +39,7 @@ function App() {
           <Route path="/my-contribution" element={<MyContribution />} />
           <Route path="/member-summary" element={<MemberSummary />} />
           <Route path="/acc-summary" element={<AccountSummary />} />
+          <Route path="/ven-summary" element={<VendorSummary />} />
           <Route path="/my-payment" element={<MyPayment />} />
         </Route>
       </Routes>

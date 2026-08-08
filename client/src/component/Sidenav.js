@@ -28,6 +28,7 @@ import {
   faHandshake,
   faChartLine,
   faIdCard,
+  faClipboardList,
 } from "@fortawesome/free-solid-svg-icons";
 
 const menuData = [
@@ -102,6 +103,11 @@ const menuData = [
     key: "vendors",
     icon: faTruck,
     children: [
+      {
+        title: "Vendor Summary",
+        icon: faClipboardList,
+        path: "/Ven-summary",
+      },
       {
         title: "New Vendor",
         icon: faHandshake,

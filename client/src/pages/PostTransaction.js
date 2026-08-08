@@ -47,10 +47,10 @@ const PostTransaction = () => {
           <h5>Post Transaction</h5>
         </div>
 
-        <div className="card-body p-4">
+        <div className="card-body ">
           <form onSubmit={handleSubmit}>
             <div className="row g-2">
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Transaction Date</label>
                 <input
                   type="date"
@@ -62,7 +62,7 @@ const PostTransaction = () => {
                 />
               </div>
 
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Transaction Type</label>
                 <select
                   className="form-select"
@@ -79,7 +79,7 @@ const PostTransaction = () => {
               </div>
 
               {/* From Account */}
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">From Account</label>
                 <select
                   className="form-select"
@@ -93,7 +93,7 @@ const PostTransaction = () => {
                   <option value="Petty Cash">Petty Cash</option>
                 </select>
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">To Account</label>
                 <select
                   className="form-select"
@@ -107,7 +107,7 @@ const PostTransaction = () => {
                   <option value="Vendor">Vendor</option>
                 </select>
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Purpose</label>
                 <select
                   className="form-select"
@@ -123,7 +123,7 @@ const PostTransaction = () => {
                   <option value="Other">Other</option>
                 </select>
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Transaction Amount</label>
                 <input
                   type="number"
@@ -137,7 +137,7 @@ const PostTransaction = () => {
                   required
                 />
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Bill</label>
                 <input
                   type="file"
@@ -146,7 +146,7 @@ const PostTransaction = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Received From / Paid To</label>
                 <input
                   type="text"
@@ -157,7 +157,7 @@ const PostTransaction = () => {
                   placeholder="Enter name"
                 />
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Receipt Required</label>
                 <select
                   className="form-select"
@@ -169,7 +169,7 @@ const PostTransaction = () => {
                   <option value="Yes">Yes</option>
                 </select>
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Phone No.</label>
                 <input
                   type="tel"
@@ -180,7 +180,7 @@ const PostTransaction = () => {
                   placeholder="Enter phone number"
                 />
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">
                   Payment / Collection Method
                 </label>
@@ -199,7 +199,7 @@ const PostTransaction = () => {
                   <option value="Card">Card</option>
                 </select>
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Remarks</label>
                 <input
                   type="text"
@@ -212,7 +212,7 @@ const PostTransaction = () => {
               </div>
 
               {/* Transaction Status - RO */}
-              <div className="col-md-4 ">
+              <div className="col-12 col-md-4 col-xl-4 ">
                 <label className="form-label ">Transaction Status</label>
                 <input
                   type="text"
@@ -225,7 +225,7 @@ const PostTransaction = () => {
               </div>
 
               {/* Collected / Paid By */}
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Collected / Paid By</label>
                 <input
                   type="text"
@@ -238,7 +238,7 @@ const PostTransaction = () => {
               </div>
 
               {/* Transaction ID - RO */}
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Transaction ID</label>
                 <input
                   type="text"
@@ -256,7 +256,7 @@ const PostTransaction = () => {
                 <div className="d-flex justify-content-end gap-2">
                   <button
                     type="button"
-                    className="btn  pt-btn-reset px-4"
+                    className="btn  pt-btn-recol-12 "
                     onClick={handleReset}
                   >
                     Reset

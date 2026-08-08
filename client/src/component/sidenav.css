@@ -30,7 +30,7 @@
 }
 .sidebar {
   position: fixed;
-  width: 230px;
+  width: 210px;
   height: 100vh;
   overflow: visible;
 }
@@ -118,7 +118,11 @@
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background: rgb(210, 195, 195);
+  background: linear-gradient(
+    207deg,
+    rgb(69, 101, 217) 0%,
+    rgb(53, 194, 88) 100%
+  );
   color: #175fcd;
   cursor: pointer;
   font-weight: 600;

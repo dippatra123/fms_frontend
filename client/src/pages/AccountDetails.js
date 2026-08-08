@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./accountDetails.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const AccountDetails = () => {
   const [accountNo, setAccountNo] = useState("");
@@ -49,8 +50,8 @@ const AccountDetails = () => {
           <h5 className="fw-bold mb-0">Account Details</h5>
         </div>
 
-        <div className="card-body">
-          <div className="search-card">
+        <div className="card-body m-2 form-container">
+          <div className="search-card ">
             <div className="search-item">
               <label className="form-label fw-semibold">Account No.</label>
 
@@ -80,16 +81,17 @@ const AccountDetails = () => {
             <div className="search-btn">
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn btn-primary search-btn"
                 onClick={handleSearch}
               >
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
                 Search
               </button>
             </div>
           </div>
         </div>
 
-        <div className="container mt-4">
+        <div className="container mt-2">
           {/* Details */}
           <div className="card shadow-sm mb-3 custom-card">
             <div className="custom-card-header">Details</div>
@@ -234,13 +236,37 @@ const AccountDetails = () => {
           </small>
 
           <div className="d-flex gap-2">
-            <button type="button" className="btn btn-outline-secondary btn-sm">
-              Previous
-            </button>
+            <nav className="d-flex justify-content-center mt-2">
+              <ul className="pagination custom-pagination">
+                <li className="page-item disabled">
+                  <button className="page-link">← Previous</button>
+                </li>
 
-            <button type="button" className="btn btn-primary btn-sm px-3">
-              Next
-            </button>
+                <li className="page-item active">
+                  <button className="page-link">1</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">2</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">3</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">4</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">5</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">Next →</button>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

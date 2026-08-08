@@ -1,7 +1,142 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+const ContributionHistory = () => {
+  return (
+    <div className="container-fluid">
+      <div className="card shadow border-0">
+        <div className="card-header">
+          <h5 className="mb-0">Contribution History</h5>
+        </div>
 
-const ContributionHistroy = () => {
-  return <div>ContributionHistroy</div>;
+        <div className="card-body p-4">
+          <form>
+            <div className="row g-2">
+              <div className="col-12 col-md-4 col-xl-4">
+                <label className="form-label">Member ID</label>
+                <select className="form-select">
+                  <option value="">Select Member ID</option>
+                  <option value="Member1">Member 1</option>
+                  <option value="Member2">Member 2</option>
+                  <option value="Member3">Member 3</option>
+                </select>
+              </div>
+
+              <div className="col-12 col-md-4 col-xl-4">
+                <label className="form-label">Contribution Type</label>
+                <select className="form-select">
+                  <option value="">Select Contribution Type</option>
+                  <option value="Type1">Type 1</option>
+                  <option value="Type2">Type 2</option>
+                  <option value="Type3">Type 3</option>
+                </select>
+              </div>
+
+              <div className="col-12 col-md-4 col-xl-4">
+                <label className="form-label">Due From Date</label>
+                <input type="date" className="form-control" />
+              </div>
+
+              <div className="col-12 col-md-4 col-xl-4">
+                <label className="form-label">Due To Date</label>
+                <input type="date" className="form-control" />
+              </div>
+
+              <div className="col-12 my-0 py-0">
+                <hr />
+                <div className="d-flex justify-content-end gap-2">
+                  <button type="reset" className="btn pt-btn-reset px-4 ">
+                    Reset
+                  </button>
+
+                  <button type="submit" className="btn  btn-primary search-btn">
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlass}
+                      className="me-2"
+                    />
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div className="table-responsive mt-2 p-3 card-body">
+          <h5 className="fw-bold mb-2">Contribution History</h5>
+          <table className="table table-sm custom-table table-bordered table-hover">
+            <thead className="table-info">
+              <tr>
+                <th>Name </th>
+                <th>Contribution Type</th>
+                <th>Raise Date </th>
+                <th>Received Date</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Raised By</th>
+                <th>Amount</th>
+                <th>Transaction ID</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>ACC001</td>
+                <td>Finance</td>
+                <td>26-Jul-2026</td>
+                <td>01-Jul-2026</td>
+                <td>26-Jul-2026</td>
+                <td>Admin</td>
+                <td>26-Jul-2026</td>
+                <td>Admin</td>
+                <td>
+                  {" "}
+                  <button
+                    type="button"
+                    className="btn btn-link p-0 text-decoration-underline fst-italic"
+                  >
+                    Hyperlink to open popup
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div className="d-flex justify-content-end mt-1">
+            <nav className="d-flex justify-content-center mt-2">
+              <ul className="pagination custom-pagination">
+                <li className="page-item disabled">
+                  <button className="page-link">← Previous</button>
+                </li>
+
+                <li className="page-item active">
+                  <button className="page-link">1</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">2</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">3</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">4</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">5</button>
+                </li>
+
+                <li className="page-item">
+                  <button className="page-link">Next →</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default ContributionHistroy;
+export default ContributionHistory;

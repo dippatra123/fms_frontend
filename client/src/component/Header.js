@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser, faBell } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,6 +12,7 @@ const Header = () => {
 
         <div className="profile">
           <FontAwesomeIcon icon={faCircleUser} className="profile-icon" />
+
           <span>Admin</span>
         </div>
       </div>

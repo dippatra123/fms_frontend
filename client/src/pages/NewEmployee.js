@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./NewEmployee.css";
-const EmployeeDetails = () => {
+
+const NewEmployee = () => {
   const initialForm = {
     name: "",
     surname: "",
@@ -47,14 +47,13 @@ const EmployeeDetails = () => {
     <div className="container-fluid">
       <div className="card shadow border-0">
         <div className="card-header">
-          <h5>Employee Details</h5>
+          <h5> NewEmployee</h5>
         </div>
 
         <div className="card-body p-4">
           <form onSubmit={handleSubmit}>
-            <div className="row g-2">
-              {/* Row 1 */}
-              <div className="col-md-4 mb-0">
+            <div className="row g-2 ">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Name</label>
                 <input
                   type="text"
@@ -65,7 +64,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Surname</label>
                 <input
                   type="text"
@@ -76,7 +75,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Email</label>
                 <input
                   type="email"
@@ -88,7 +87,7 @@ const EmployeeDetails = () => {
               </div>
 
               {/* Row 2 */}
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Phone No</label>
                 <input
                   type="tel"
@@ -99,7 +98,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Salary</label>
                 <input
                   type="number"
@@ -110,7 +109,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Joining Date</label>
                 <input
                   type="date"
@@ -122,7 +121,7 @@ const EmployeeDetails = () => {
               </div>
 
               {/* Row 3 */}
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Salary Escalation</label>
                 <input
                   type="number"
@@ -133,7 +132,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Payment Start Date</label>
                 <input
                   type="date"
@@ -144,7 +143,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">PAN</label>
                 <input
                   type="text"
@@ -155,8 +154,8 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              {/* Row 4 */}
-              <div className="col-md-4 mb-0">
+              {/* -12 col-md-4 col-xl-4 */}
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Aadhar No</label>
                 <input
                   type="text"
@@ -167,7 +166,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Bank Name</label>
                 <input
                   type="text"
@@ -178,7 +177,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Branch Name</label>
                 <input
                   type="text"
@@ -190,7 +189,7 @@ const EmployeeDetails = () => {
               </div>
 
               {/* Row 5 */}
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Account No</label>
                 <input
                   type="text"
@@ -201,7 +200,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">IFSC Code</label>
                 <input
                   type="text"
@@ -212,7 +211,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Payment From</label>
                 <select
                   className="form-select"
@@ -228,7 +227,7 @@ const EmployeeDetails = () => {
               </div>
 
               {/* Row 6 */}
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Highest Qualification</label>
                 <input
                   type="text"
@@ -239,7 +238,7 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              <div className="col-md-4 mb-0">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Employee ID</label>
                 <input
                   type="text"
@@ -249,35 +248,14 @@ const EmployeeDetails = () => {
                 />
               </div>
 
-              {/* Row 7 */}
-              <div className="col-md-4 mb-0">
-                <label className="form-label">Address</label>
-                <textarea
-                  className="form-control"
-                  name="address"
-                  value={formData.address}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="col-md-4 mb-0">
-                <label className="form-label">Responsibilities</label>
-                <textarea
-                  className="form-control"
-                  name="responsibilities"
-                  value={formData.responsibilities}
-                  onChange={handleChange}
-                />
-              </div>
-
               {/* Buttons */}
-              <div className="col-12 mt-0">
+              <div className="col-12">
                 <hr />
 
                 <div className="d-flex justify-content-end gap-2">
                   <button
                     type="button"
-                    className="btn pt-btn-reset px-4"
+                    className="btn pt-btn-reset-12 px-4"
                     onClick={handleReset}
                   >
                     Reset
@@ -296,4 +274,4 @@ const EmployeeDetails = () => {
   );
 };
 
-export default EmployeeDetails;
+export default NewEmployee;

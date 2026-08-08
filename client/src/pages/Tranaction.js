@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./tranaction.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const Tranaction = () => {
   const initialState = {
     accountNo: "",
@@ -42,7 +43,7 @@ const Tranaction = () => {
         <div className="card-body p-4">
           <form onSubmit={handleSubmit}>
             <div className="row g-2">
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Account No</label>
                 <input
                   className="form-control"
@@ -52,7 +53,7 @@ const Tranaction = () => {
                 />
               </div>
 
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Status</label>
                 <select
                   className="form-select"
@@ -67,7 +68,7 @@ const Tranaction = () => {
               </div>
 
               {/* From Account */}
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Posted By</label>
                 <select
                   className="form-select"
@@ -78,7 +79,7 @@ const Tranaction = () => {
                   <option value="">Select</option>
                 </select>
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Transaction From Date</label>
                 <input
                   type="date"
@@ -88,7 +89,7 @@ const Tranaction = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">To Account</label>
                 <select
                   className="form-select"
@@ -99,7 +100,7 @@ const Tranaction = () => {
                   <option value="">Select</option>
                 </select>
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Transaction Type</label>
                 <select
                   className="form-select"
@@ -111,7 +112,7 @@ const Tranaction = () => {
                 </select>
               </div>
 
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Transaction ID</label>
                 <input
                   type="number"
@@ -121,7 +122,7 @@ const Tranaction = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="col-md-4">
+              <div className="col-12 col-md-4 col-xl-4">
                 <label className="form-label">Transaction To Date</label>
                 <input
                   type="date"
@@ -147,7 +148,11 @@ const Tranaction = () => {
                   <button type="submit" className="btn pt-btn-save px-4">
                     Export
                   </button>
-                  <button type="submit" className="btn pt-btn-save px-4">
+                  <button type="submit" className="btn  btn-primary search-btn">
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlass}
+                      className="me-2"
+                    />
                     Search
                   </button>
                 </div>
@@ -156,7 +161,7 @@ const Tranaction = () => {
           </form>
         </div>
         <div className="table-responsive mt-2 p-3 card-body">
-          <table className="table table-sm table-bordered table-hover">
+          <table className="table table-sm table-bordered table-hover custom-table ">
             <thead className="table-info">
               <tr>
                 <th>Transaction ID</th>
@@ -201,9 +206,9 @@ const Tranaction = () => {
           </table>
         </div>
         <div className="table-responsive mt-2 p-3 card-body">
-          <h5 className="fw-bold mb-2">Suggested Unmatched Transactions</h5>
+          <h6 className="fw-semibold mb-2">Suggested Unmatched Transactions</h6>
 
-          <table className="table table-sm table-bordered table-hover">
+          <table className="table table-sm table-bordered table-hover custom-table ">
             <thead className="table-info">
               <tr>
                 <th>Reference Transaction ID</th>
