@@ -1,17 +1,12 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-
+import React, { useState } from "react";
 import "./login.css";
 
 function Login() {
-  const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     userName: "",
     password: "",
   });
 
-  const [message, setMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
@@ -42,7 +37,7 @@ function Login() {
         ) (
         <div className="login-alert success-alert">
           <i className="fa-solid fa-circle-check"></i>
-          <span>{message}</span>
+          <span></span>
         </div>
         )
         <form onSubmit={handleSubmit}>
